@@ -68,6 +68,17 @@
             <artifactId>scp-api-manager-api</artifactId>
             <version>1.0.0</version>
         </dependency>
+        <!--二维码-->
+        <dependency>
+            <groupId>QRCode</groupId>
+            <artifactId>QRCode</artifactId>
+            <version>3.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.zxing</groupId>
+            <artifactId>zxing</artifactId>
+            <version>3.2.1</version>
+        </dependency>
     </dependencies>
 
     <build>
