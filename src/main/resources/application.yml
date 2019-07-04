@@ -1,0 +1,17 @@
+
+server:
+  port: 7002
+spring:
+  application:
+    name: scp-feign-consumer
+
+eureka:
+  instance:
+    hostname: localhost
+    instance-id: localhost:${server.port}
+    prefer-ip-address: true # 开启以Ip+端口多方式显示Eureka界面
+    lease-renewal-interval-in-seconds: 30 # 向Eureka发送心跳时间为30秒
+    lease-expiration-duration-in-seconds: 90 #服务检查剔除无用服务时间为90秒
+  client:
+    serviceUrl:
+      defaultZone: http://peer1:9009/eureka/,http://peer2:9010/eureka/
