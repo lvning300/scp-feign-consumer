@@ -5,7 +5,6 @@ spring:
   application:
     name: scp-feign-consumer
 
-SCP-API-MANAGER.roi
 
 eureka:
   instance:
