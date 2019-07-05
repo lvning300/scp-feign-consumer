@@ -1,7 +1,7 @@
 package com.lv.cloud.controller;
 
 
-import com.lv.cloud.UserServiceFeignClient;
+import com.lv.cloud.service.RefactorUserServiceFeignClient;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,12 +24,12 @@ import org.springframework.web.bind.annotation.RestController;
 public class UserController {
 
     @Autowired
-    UserServiceFeignClient userServiceFeignClient;
+    RefactorUserServiceFeignClient refactorUserServiceFeignClient;
 
     @ApiOperation(value = "查询所有用户信息", response = Object.class)
     @GetMapping(value = "all", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     public Object queryAll() {
-        return userServiceFeignClient.queryAll();
+        return refactorUserServiceFeignClient.queryAll();
 
     }
 
